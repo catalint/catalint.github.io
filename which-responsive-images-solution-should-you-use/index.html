@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Which responsive images solution should you use? | Catalin T.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="There are a bunch of techniques going around for dealing with responsive images lately. That is, solutions to help us serve the right image for the occasion (e.g. size of screen and bandwidth availabl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Which responsive images solution should you use?">
+<meta property="og:url" content="http://catalint.github.io/which-responsive-images-solution-should-you-use/index.html">
+<meta property="og:site_name" content="Catalin T.">
+<meta property="og:description" content="There are a bunch of techniques going around for dealing with responsive images lately. That is, solutions to help us serve the right image for the occasion (e.g. size of screen and bandwidth availabl">
+<meta property="og:image" content="http://cdn.css-tricks.com/wp-content/uploads/2012/05/legacycontent.png">
+<meta property="og:updated_time" content="2015-11-20T21:41:58.300Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Which responsive images solution should you use?">
+<meta name="twitter:description" content="There are a bunch of techniques going around for dealing with responsive images lately. That is, solutions to help us serve the right image for the occasion (e.g. size of screen and bandwidth availabl">
+  
+    <link rel="alternative" href="/atom.xml" title="Catalin T." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Catalin T.</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://catalint.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-which-responsive-images-solution-should-you-use" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/which-responsive-images-solution-should-you-use/" class="article-date">
+  <time datetime="2013-08-15T13:36:27.000Z" itemprop="datePublished">2013-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Root/">Root</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Which responsive images solution should you use?
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span style="font-family: 'Source Sans Pro', Helvetica, sans-serif; line-height: 1.5;">There are a bunch of techniques going around for dealing with </span><strong>responsive images</strong><span style="font-family: 'Source Sans Pro', Helvetica, sans-serif; line-height: 1.5;"> lately. That is, solutions to help us serve the right image for the occasion (e.g. size of screen and bandwidth available). They all do things a bit differently. To keep track, Christopher Schmitt has created </span><a href="https://docs.google.com/spreadsheet/ccc?key=0Al0lI17fOl9DdDgxTFVoRzFpV3VCdHk2NTBmdVI2OXc" target="_blank" rel="external">this spreadsheet of techniques</a><span style="font-family: 'Source Sans Pro', Helvetica, sans-serif; line-height: 1.5;">.</span><br>The spreadsheet has the data, but let’s digest it through thinking about it through the lens of practical questions.<br><a id="more"></a><br>To choose which technique is right for you and your project these questions may help as a guide. Many of the questions may apply to your project, so you’ll have to sort out which techniques fit what scenarios and find the overlap.</p>
+<h3 id="Do_I_have_legacy_content?">Do I have legacy content?</h3><p>Which really means… <strong>do I have legacy content that is impractical to update?</strong> For instance, I have thousands of pages of content on CSS-Tricks and a writing staff of one.</p>
+<p><figure><img src="http://cdn.css-tricks.com/wp-content/uploads/2012/05/legacycontent.png" alt="" title="legacycontent"></figure>Yeahhhh… I’m not going to go back and update every <code>&amp;lt;img&amp;gt;</code> on the site, so I need a technique that will allow me to leave those alone.</p>
+<p>The only technique I know of that works with absolutely no markup changes is <a href="http://adaptive-images.com/" target="_blank" rel="external">Adaptive Images</a>. It works by routing requests for images through a PHP file which intelligently serves (and creates if need be) images of the appropriate size for the screen width.</p>
+<p>Another question to ask yourself is if you care about legacy content. Perhaps the vast majority of traffic to your site is for newer content in which you <strong>can</strong> make markup changes and thus take advantage of other techniques. If that’s the case, read on to discover those other techniques.</p>
+<p>If you have a small project, a brand new project, or a project with legacy content that you are able go back and update, you are also able to choose a technique which does require special markup, so also read on.</p>
+<h4 id="Do_I_care_about_special_markup?">Do I care about special markup?</h4><p>This is really a sub-question of the above. Many of the techniques require you to use special HTML. For example, <a href="https://github.com/teleject/hisrc" target="_blank" rel="external">HiSRC</a> has you put higher resolution images as data-attributes:</p>
+<pre><code>&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;src&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"200x100.png"</span>&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;data-<span class="number">1</span>x&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"400x200.png"</span>&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;data-<span class="number">2</span>x&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"800x400.png"</span>&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;`&lt;/pre&gt;
+<span class="type">I</span><span class="symbol">'d</span> say <span class="keyword">this</span> is a clean, valid, semantic technique, but it also means that you need these attributes on every `&amp;lt;img&amp;gt;` on your site, which may not be possible on sites <span class="keyword">with</span> loads of legacy content.
+
+<span class="type">If</span> you know that special markup (or specialized <span class="type">CSS</span>) is not an option <span class="keyword">for</span> you, really the only option is [<span class="type">Adaptive</span> <span class="type">Images</span>](http:<span class="comment">//adaptive-images.com/). Even [Sencha.IO](http://www.sencha.com/products/io/) requires prefixing the src attribute which may not be possible with legacy content.</span>
+
+### <span class="type">Do</span> <span class="type">I</span> care about semantics?
+
+<span class="type">Some</span> responsive images techniques involve markup which isn<span class="symbol">'t</span> strictly semantic. <span class="type">Ultimately</span>, there is only one way an image can be semantic. <span class="type">That</span> is <span class="keyword">if</span> the `src` of it points to a real image and it has `alt` text describing that image. <span class="type">Brad</span> <span class="type">Frost</span> sums it up nicely:
+&gt; @[stowball](https:<span class="comment">//twitter.com/stowball) Unfortunately its not that simple. A picture of a horse needs to be a picture of a horse or else its not a picture of a horse. :)</span>
+</code></pre><blockquote>
+<pre><code>— Brad Frost (<span class="annotation">@brad</span>_frost) [April <span class="number">5</span>, <span class="number">2012</span>](<span class="string">https:</span><span class="comment">//twitter.com/brad_frost/status/188024708866912257)</span>
+&amp;nbsp;
+</code></pre></blockquote>
+<pre><code><span class="type">In</span> other words, <span class="keyword">if</span> the technique requires at any point the `src` of the image to be missing or link to a transparent <span class="type">GIF</span> (or the like), that<span class="symbol">'s</span> not semantic.
+
+<span class="type">So</span> why do some responsive images techniques do <span class="keyword">this</span>? <span class="type">Because</span> having an image <span class="keyword">with</span> a `src` that points to that image of a horse means that that image will start downloading as soon as that image gets parsed by the browser. <span class="type">There</span> is no practical way to prevent <span class="keyword">this</span>. <span class="type">Even</span> <span class="keyword">if</span> you _super quickly_ swap out that `src` <span class="keyword">with</span> a more appropriate version, now you<span class="symbol">'re</span> downloading two images instead of one which is a performance hit instead of a performance gain. <span class="type">You</span> may decide that<span class="symbol">'s</span> acceptable (e.g. <span class="string">"desktop"</span> environments typically have more bandwidth). <span class="type">Usually</span> <span class="keyword">if</span> <span class="keyword">this</span> technique is employed, the image in the `src` is the smallest possible image.
+
+<span class="type">If</span> semantics is important to you, you should look at [<span class="type">Adaptive</span> <span class="type">Images</span>](http:<span class="comment">//adaptive-images.com/) (covered above) or [HiSRC](https://github.com/teleject/hisrc), a plugin by Christopher Schmitt which you can use with a semantic `src` attribute.</span>
+
+<span class="type">A</span> few of the techniques use `&amp;lt;noscript&amp;gt;` tags in which to place a fallback `&amp;lt;img&amp;gt;` in the <span class="keyword">case</span> of no <span class="type">JavaScript</span> being available. <span class="type">I</span><span class="symbol">'ll</span> let you decide <span class="keyword">if</span> that<span class="symbol">'s</span> semantic or not.
+
+### <span class="type">Do</span> <span class="type">I</span> care about validity?
+
+<span class="type">Validity</span> as in <span class="string">"Does it validate?"</span> according to the [<span class="type">W3C</span> <span class="type">Markup</span> <span class="type">Validation</span> <span class="type">Service</span>](http:<span class="comment">//validator.w3.org/). Validation is a tool to help you find problems and write better markup. But just because something doesn't validate doesn't make it bad or wrong. If invalid code works wonderfully in all browsers, you nor anyone else should care.</span>
+
+<span class="type">If</span> you do care about validity (perhaps a client irrationally requires it from you and is holding your paycheck randsom) then there are a few techniques that you can<span class="symbol">'t</span> use. <span class="type">The</span> [picturefill](https:<span class="comment">//github.com/scottjehl/picturefill) technique, for instance, uses the `&amp;lt;picture&amp;gt;` element to work its magic. This may ultimately be standarized, but it isn't yet, so it's technically invalid syntax. It's also required that `&amp;lt;img&amp;gt;` elements have a `src` attribute, so techniques that remove that to get around the double-image-request problem are invalid.</span>
+
+<span class="type">I</span><span class="symbol">'d</span> recommend these techniques <span class="keyword">if</span> validity is a requirement <span class="keyword">for</span> you: [<span class="type">Adaptive</span> <span class="type">Images</span>](http:<span class="comment">//adaptive-images.com/), [HiSRC](https://github.com/teleject/hisrc), or [Responsive Enhance](https://github.com/joshje/Responsive-Enhance). All of which use simple, valid `&amp;lt;img&amp;gt;` syntax that include a `src`.</span>
+
+### <span class="type">Do</span> <span class="type">I</span> care about art direction?
+
+<span class="type">Some</span> responsive images techniques serve different resolution versions of the exact same image. <span class="type">While</span> that makes things easier (i.e. less work) it may not acceptable. <span class="type">Here</span><span class="symbol">'s</span> a visual example:
+
+&lt;figure&gt;[![difimages](http:<span class="comment">//catalint.ro/media/difimages-620x242.jpg)](http://catalint.ro/media/difimages.jpg)</span>
+&lt;figcaption&gt;<span class="type">On</span> the left, the <span class="string">"mobile"</span> and <span class="keyword">default</span> `src`. <span class="type">In</span> the middle, a slightly larger image that could be used on (ahem) <span class="string">"tablets"</span>. <span class="type">On</span> the right, the largest of the images.[(credit)](http:<span class="comment">//www.flickr.com/photos/whitehouse/7136874959/sizes/l/in/photostream/)&lt;/figcaption&gt;&lt;/figure&gt;These images are hand-crafted by a designer, cropped to retain meaning and impact. If you took the image on the right and just scaled it down, the people in the image would be very small and the feel of the image my be lost.</span>
+
+<span class="type">If</span> <span class="keyword">this</span> idea of art direction is important to your project, you<span class="symbol">'ll</span> need a technique that will allow you to specify exactly which src to serve under which circumstances. <span class="type">This</span> is picture perfect (<span class="type">GET</span> <span class="type">IT</span>?) <span class="keyword">for</span> [picturefill](https:<span class="comment">//github.com/scottjehl/picturefill) which allows you to be very specific about sources and what circumstances get what.</span>
+&lt;pre <span class="class"><span class="keyword">class</span>=</span><span class="string">" language-markup"</span>&gt;`&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;&lt;/span&gt;picture&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;alt&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"description"</span>&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;src&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"small.jpg"</span>&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;src&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"medium.jpg"</span>&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;media&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"(min-width: 400px)"</span>&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;src&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"large.jpg"</span>&lt;/span&gt; &lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-name"</span>&gt;media&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token attr-value"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;=&lt;/span&gt;<span class="string">"(min-width: 800px)"</span>&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token tag"</span>&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;lt;/&lt;/span&gt;picture&lt;/span&gt;&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"token punctuation"</span>&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+</code></pre><p>JavaScript takes it from there.</p>
+<h3 id="Do_I_care_about_JavaScript?">Do I care about JavaScript?</h3><p>Most of these responsive image techniques utilize JavaScript to work their magic. <a href="http://adaptive-images.com/" target="_blank" rel="external">Some</a> only a tiny bit to set a cookie, but JavaScript none the less. Some of them have you put an <code>&amp;lt;img&amp;gt;</code> in a <code>&amp;lt;noscript&amp;gt;</code> tag so that there is a fallback image in the case that the user has JavaScript turned off. If you don’t like that, and you need to make absolutely sure that your images work without JavaScript, <a href="http://www.sencha.com/products/io" target="_blank" rel="external">Sencha.IO</a> is your best bet. This service works by identifying your device through it’s <a href="http://en.wikipedia.org/wiki/User_agent" target="_blank" rel="external">User Agent</a> string and serving an appropriately sized image. So you link to the largest (reasonable) version you have of it and Sencha will squeeze it down and server smaller versions if need be (it doesn’t scale up, for obvious reasons).</p>
+<h4 id="What_about_JavaScript_library_dependency?">What about JavaScript <em>library</em> dependency?</h4><p><a href="https://github.com/teleject/hisrc" target="_blank" rel="external">HiSRC</a> and <a href="https://github.com/stowball/jQuery-rwdImages" target="_blank" rel="external">rwdImages</a> are both jQuery dependent. If your project is using a different library, these probably aren’t for you. But hey, you could port it and open source that! If you aren’t using a library, well, you probably should be but let’s not get into that.</p>
+<h3 id="Do_I_care_about_Server_Side_Components?">Do I care about Server Side Components?</h3><p>Some of these techniques aren’t solely JavaScript dependent. <a href="http://adaptive-images.com/" target="_blank" rel="external">Adaptive Images</a> works it’s magic primarily through .htaccess and PHP. Well, .htaccess presupposes an Apache server. And, while of course we all know and love PHP (ahem), many websites run on technologies like Ruby or Python.</p>
+<p><a href="https://github.com/filamentgroup/Responsive-Images" target="_blank" rel="external">Responsive Images</a> (the original Filament Group technique) also uses .htaccess. So if you’re using something like <a href="http://wiki.nginx.org/Main" target="_blank" rel="external">Nginx</a> as web server, this is either out or you’ll have to port over the .htaccess component to Nginx’s similar-but-different syntax.</p>
+<h3 id="Do_I_care_about_bandwidth_testing?">Do I care about bandwidth testing?</h3><p>Testing the browser window width and making decisions on what image to serve based on that is pretty cool and fundamental to the concept of responsive images. But it’s really only half of what the decision of what image should be served should be based on. The other half is available bandwidth. If the user has a very fast internet connection speed, serving large images is OK. If the user has a very slow internet connection speed, they should get smaller images (regardless of screens size). Unfortunately native <a href="http://css-tricks.com/bandwidth-media-queries/" target="_blank" rel="external">bandwidth media queries</a> don’t exist.</p>
+<p>Two of the current techniques do bandwidth testing as part of their decision making: <a href="http://github.com/adamdbradley/foresight.js" target="_blank" rel="external">Foresight.js</a> and <a href="https://github.com/teleject/hisrc" target="_blank" rel="external">HiSRC</a> (both are based on the technique in Foresight.js). It works by downloading a test file and measuring how long it took (configurable). The test itself is a slight performance hit, but theoretically the savings gained by serving images based on knowing the current bandwidth is a net (GET IT?) gain.</p>
+<h3 id="Do_I_care_about_relying_on_third_parties?">Do I care about relying on third parties?</h3><p><a href="http://www.sencha.com/products/io/" target="_blank" rel="external">Sencha.IO</a> is a completely third-party way of handling responsive images. As far as I know, it works great and hasn’t been inflicted with any major downtime, but of course you always run that risk.</p>
+<p>You might be thinking: <em>Wow, the Sencha.IO technique is really cool but I worry about the third-party dependency. I wish I could run that on my own server.</em> If you want to go down that road, there is the public <a href="http://wurfl.sourceforge.net/" target="_blank" rel="external">WURFL database</a> and this <a href="https://github.com/carsonmcdonald/ServerSideResponsiveImageExample" target="_blank" rel="external">Server Side Responsive Images technique</a> which puts that to work locally.</p>
+<p>There are also third-party services like <a href="http://deviceatlas.com/products/cloud" target="_blank" rel="external">Device Atlas Cloud</a> which does device detection for you. It’s also a third-party dependency for your app. No doubt their goal and focus is staying up and fast at all times, but you have to be very careful about who and what you rely on for your business.</p>
+<p>A couple of other third party services: <a href="http://www.resrc.it/" target="_blank" rel="external">ReSRC.it</a>, <a href="https://responsive.io/" target="_blank" rel="external">Responsive.io</a>, <a href="http://www.thumbr.io/" target="_blank" rel="external">Thumber.io</a></p>
+<h3 id="Is_there_a_specific_CMS_with_specific_CMS_powers_involved?">Is there a specific CMS with specific CMS powers involved?</h3><p>Say your project is in WordPress. WordPress has a media uploader built in. When you upload an image with it, it can create multiple versions (scaling down) of that image for you. That’s pretty cool and powerful and you could/should take advantage of that. Keir Whitaker talks about using that ability in his article <a href="http://viewportindustries.com/blog/automatic-responsive-images-in-wordpress/" target="_blank" rel="external">Automatic Responsive Images in WordPress</a>.</p>
+<p>This isn’t just a WordPress thing though. I’m sure the concepts at work here could be done (or made to be done) in any Content Management System.</p>
+<h3 id="Do_I_care_about_double-requests_as_long_as_the_solution_is_mobile_first?">Do I care about double-requests as long as the solution is mobile first?</h3><p>Many of these solutions try to solve the the problem the best way possible: only making a single request for the right resource. If you are OK with linking up the smallest version of the file (so that request is made no matter what) and replacing it with larger images when needed, perhaps <a href="http://www.jordanm.co.uk/lab/sourceshuffling" target="_blank" rel="external">Source Shuffling</a> would work for you. Do note that <a href="https://github.com/JoshBarr/js-media-queries" target="_blank" rel="external">the library</a> that uses now suggests using <code>font-family</code> rather than <code>content</code> to detect the media query changes.</p>
+<h3 id="Can_I_wait_for_the_future?">Can I wait for the future?</h3><p>The release of the “new iPad” (the third one, for longevity) is what sparked a lot of these techniques and conversations. Its high pixel density is great for vectors and big photos, but actually not great for things like small icons that need to be scaled up to be the correct size and can be blurry. But serving higher resolution icons means larger file sizes and slower websites. Hence, the need to only serve them in situations/environments that need them.</p>
+<p>The world of web standards is aware of this problem. There is a <a href="http://www.w3.org/community/respimg/" target="_blank" rel="external">whole group</a> dedicated to talking about it. In time, they may solve it and then we can start using whatever way they come up with (assuming its awesome and better than what we have now).</p>
+<p>It may be flipping out the src of images <a href="http://nicolasgallagher.com/responsive-images-using-css3/" target="_blank" rel="external">through CSS content</a> like Nicolas Gallagher suggested. It might be the <code>&amp;lt;picture&amp;gt;</code> element. It might be a <a href="http://robertnyman.com/2011/05/30/discussing-alternatives-for-various-sizes-of-the-same-image-introducing-src-property-in-css-as-an-option/" target="_blank" rel="external">srclist attribute in HTML or src property in CSS</a>. It might be a <a href="http://blog.yoav.ws/2011/05/My-take-on-adaptive-images" target="_blank" rel="external">prefix</a>.</p>
+<p>It maybe sending browser information requests, like in <a href="https://github.com/igrigorik/http-client-hints" target="_blank" rel="external">Client-Hints</a>.</p>
+<h3 id="More_resources">More resources</h3><ul>
+<li>Jason Grigsby has an epic three-part series on responsive images <a href="http://blog.cloudfour.com/responsive-imgs/" target="_blank" rel="external">starting here</a>.</li>
+<li>Christopher Schmitt’s <a href="http://www.slideshare.net/teleject/convergese-adaptiveimagesconverge-se" target="_blank" rel="external">slides on a whole talk</a> about responsive images.</li>
+<li>Mat Marquis on <a href="http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/" target="_blank" rel="external">Responsive Images: How they Almost Worked and What We Need</a><br><script charset="utf-8" type="text/javascript" src="//platform.twitter.com/widgets.js"></script><br>source: <a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/" target="_blank" rel="external">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://catalint.github.io/which-responsive-images-solution-should-you-use/" data-id="cih86zoju0008wsosrdbjnwfe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/latest-trends-in-front-end-programming/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Latest trends in front-end programming
+        
+      </div>
+    </a>
+  
+  
+    <a href="/scandir-php-dot-and-double-dots/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">scandir() php dot and double dots</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Root/">Root</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Troll/">Troll</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/a-new-kind-of-db-distributed-stream-processing-framework/">a new kind of DB, distributed stream processing framework</a>
+          </li>
+        
+          <li>
+            <a href="/scoped-css/">scoped CSS</a>
+          </li>
+        
+          <li>
+            <a href="/google-wallet-merchant-registration-available-in-romania/">Google Wallet Merchant registration available in Romania</a>
+          </li>
+        
+          <li>
+            <a href="/ls-in-windows-command-prompt/">ls in windows command prompt</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Catalin Tanasescu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

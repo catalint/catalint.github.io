@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Catalin T.</title>
+  <title>scoped CSS | Catalin T.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Catalin T.">
-<meta property="og:url" content="http://catalint.github.io/archives/2015/index.html">
+  <meta name="description" content="Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game cha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="scoped CSS">
+<meta property="og:url" content="http://catalint.github.io/scoped-css/index.html">
 <meta property="og:site_name" content="Catalin T.">
-<meta property="og:description">
+<meta property="og:description" content="Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game cha">
+<meta property="og:updated_time" content="2015-11-20T21:41:58.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Catalin T.">
-<meta name="twitter:description">
+<meta name="twitter:title" content="scoped CSS">
+<meta name="twitter:description" content="Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game cha">
   
     <link rel="alternative" href="/atom.xml" title="Catalin T." type="application/atom+xml">
   
@@ -59,77 +60,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hello-world/" class="archive-article-date">
-  <time datetime="2015-11-20T21:23:13.397Z" itemprop="datePublished">Nov 20</time>
+        <section id="main"><article id="post-scoped-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/scoped-css/" class="article-date">
+  <time datetime="2015-02-27T21:57:43.000Z" itemprop="datePublished">2015-02-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Root/">Root</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      scoped CSS
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/a-new-kind-of-db-distributed-stream-processing-framework/" class="archive-article-date">
-  <time datetime="2015-03-05T14:48:27.000Z" itemprop="datePublished">Mar 5</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/a-new-kind-of-db-distributed-stream-processing-framework/">a new kind of DB, distributed stream processing framework</a>
-    </h1>
-  
+        <p>Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game changer. Today might just be another one of those days (kind of).<a id="more"></a></p>
+<p>One little known feature of HTML5 is Scoped CSS. It’s an attribute for style blocks that may change the way we tackle certain styling challenges in the future.</p>
+<p>The implementation for scoping is simple. Let’s look at some code on an otherwise unstyled page where all text is the default black:</p>
+<p><code>&amp;lt;div&amp;gt;
+&amp;lt;style scoped&amp;gt;
+h1 { color: FireBrick; }
+p { color: SaddleBrown; }
+&amp;lt;/style&amp;gt;
+&amp;lt;h1&amp;gt;This is an H1 in a scoped div. Regardless of global styles the text should be &quot;FireBrick&quot;.&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;This is a paragraph in a scoped div. The text should be &quot;SaddleBrown&quot;.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p&amp;gt;This is another paragraph, that will unaffected by the scoped style and remain black.&amp;lt;/p&amp;gt;</code><br>&nbsp;</p>
+<p>read the rest on  <a href="https://css-tricks.com/saving-the-day-with-scoped-css/" target="_blank" rel="external">css-tricks</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/scoped-css/" class="archive-article-date">
-  <time datetime="2015-02-27T21:57:43.000Z" itemprop="datePublished">Feb 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/scoped-css/">scoped CSS</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://catalint.github.io/scoped-css/" data-id="cih86zokm000twsosywtz97v1" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/a-new-kind-of-db-distributed-stream-processing-framework/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          a new kind of DB, distributed stream processing framework
+        
+      </div>
+    </a>
+  
+  
+    <a href="/google-wallet-merchant-registration-available-in-romania/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Google Wallet Merchant registration available in Romania</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

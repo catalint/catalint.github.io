@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Catalin T.]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://catalint.github.io/"/>
+  <updated>2015-11-20T21:23:13.397Z</updated>
+  <id>http://catalint.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Catalin Tanasescu]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://catalint.github.io/hello-world/"/>
+    <id>http://catalint.github.io/hello-world/</id>
+    <published>2015-11-20T21:23:13.397Z</published>
+    <updated>2015-11-20T21:23:13.397Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[a new kind of DB, distributed stream processing framework]]></title>
+    <link href="http://catalint.github.io/a-new-kind-of-db-distributed-stream-processing-framework/"/>
+    <id>http://catalint.github.io/a-new-kind-of-db-distributed-stream-processing-framework/</id>
+    <published>2015-03-05T14:48:27.000Z</published>
+    <updated>2015-11-20T21:41:58.321Z</updated>
+    <content type="html"><![CDATA[<p>This talk is about database architecture and application architecture. It’s somewhat related to an open source project I’ve been working on, called Apache Samza. I’m Martin Kleppmann, and I was until recently at LinkedIn working on Samza. At the moment I’m taking a sabbatical to write a book for O’Reilly, called Designing Data-Intensive Applications.</p>
+<p>Let’s talk about databases. What I mean is not any particular brand of database — I don’t mind whether you’re using relational, or NoSQL, or whatever. I’m really talking about the general concept of a database, as we use it when building applications.</p>
+<p><a href="http://blog.confluent.io/2015/03/04/turning-the-database-inside-out-with-apache-samza/" target="_blank" rel="external">read more</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This talk is about database architecture and application architecture. It’s somewhat related to an open source project I’ve been working ]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[scoped CSS]]></title>
+    <link href="http://catalint.github.io/scoped-css/"/>
+    <id>http://catalint.github.io/scoped-css/</id>
+    <published>2015-02-27T21:57:43.000Z</published>
+    <updated>2015-11-20T21:41:58.321Z</updated>
+    <content type="html"><![CDATA[<p>Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game changer. Today might just be another one of those days (kind of).<a id="more"></a></p>
+<p>One little known feature of HTML5 is Scoped CSS. It’s an attribute for style blocks that may change the way we tackle certain styling challenges in the future.</p>
+<p>The implementation for scoping is simple. Let’s look at some code on an otherwise unstyled page where all text is the default black:</p>
+<p><code>&amp;lt;div&amp;gt;
+&amp;lt;style scoped&amp;gt;
+h1 { color: FireBrick; }
+p { color: SaddleBrown; }
+&amp;lt;/style&amp;gt;
+&amp;lt;h1&amp;gt;This is an H1 in a scoped div. Regardless of global styles the text should be &quot;FireBrick&quot;.&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;This is a paragraph in a scoped div. The text should be &quot;SaddleBrown&quot;.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p&amp;gt;This is another paragraph, that will unaffected by the scoped style and remain black.&amp;lt;/p&amp;gt;</code><br>&nbsp;</p>
+<p>read the rest on  <a href="https://css-tricks.com/saving-the-day-with-scoped-css/" target="_blank" rel="external">css-tricks</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Over the last couple years HTML5 and CSS3 have rocked our worlds and the way we approach common website issues. Every few days it seems there is some new fangled snippet or approach that is a game changer. Today might just be another one of those days (kind of).]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Google Wallet Merchant registration available in Romania]]></title>
+    <link href="http://catalint.github.io/google-wallet-merchant-registration-available-in-romania/"/>
+    <id>http://catalint.github.io/google-wallet-merchant-registration-available-in-romania/</id>
+    <published>2014-05-02T06:00:48.000Z</published>
+    <updated>2015-11-20T21:41:58.318Z</updated>
+    <content type="html"><![CDATA[<p> Beginning May 1 2014, developers from Greece, Luxembourg, Romania, Saudi Arabia, Slovakia, Turkey, Ukraine and Vietnam will be able to sign up as merchants through the Google Play Developer Console.</p>
+<a id="more"></a>
+<p>To get started with Google Wallet Merchant registration:</p>
+<ol>
+<li>Visit your profile page on the <a href="http://www.google.com/appserve/mkt/p/iWPK3SQwK5Aq3xRZMk-xvi29q5flEPNP2_hnE7QjjGCjklweCsAy3S_w8y8gSYCbzV4uUfRvI8Ie_oRcT0BqNlzuuw==" target="_blank" rel="external">Google Play Developer Console</a></li>
+<li>Under the Merchant Account heading, click the ‘Set up a merchant account now’ link.</li>
+</ol>
+<p>Once registered, visit the <a href="http://www.google.com/appserve/mkt/p/a10OrXmvhzEQvhunpMlL4-yASOVBQBNDx5mHIwIJPWw-iKUnDeWHRJmOyPPQCXVMVAVKlDCC5jEOOTXgJSuZ1YagRf1PO0b0tExlqj7JW4p8SpMZNN4=" target="_blank" rel="external">Google Play Android Developer Help Center</a> to learn more about selling your apps, managing orders, and receiving payouts.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> Beginning May 1 2014, developers from Greece, Luxembourg, Romania, Saudi Arabia, Slovakia, Turkey, Ukraine and Vietnam will be able to sign up as merchants through the Google Play Developer Console.</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ls in windows command prompt]]></title>
+    <link href="http://catalint.github.io/ls-in-windows-command-prompt/"/>
+    <id>http://catalint.github.io/ls-in-windows-command-prompt/</id>
+    <published>2014-04-26T09:50:15.000Z</published>
+    <updated>2015-11-20T21:41:58.318Z</updated>
+    <content type="html"><![CDATA[<p>If you get a lot of this</p>
+<pre><code>D:&amp;gt;ls
+<span class="string">'ls'</span> is <span class="operator">not</span> recognized <span class="keyword">as</span> <span class="operator">an</span> internal <span class="operator">or</span> external <span class="command"><span class="keyword">command</span>,</span>
+operable program <span class="operator">or</span> batch <span class="built_in">file</span>.
+`&lt;/pre&gt;
+&lt;!<span class="comment">--more--&gt;</span>
+
+You can run this <span class="operator">in</span> <span class="command"><span class="keyword">command</span> <span class="title">prompt</span>:</span>
+&lt;pre&gt;`echo dir %<span class="number">1</span> &amp;gt; %systemroot%\system32\ls.bat
+</code></pre><p>Make sure you run <code>cmd.exe</code> as admin first if you are on vista and up</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>If you get a lot of this</p>
+<pre><code>D:&amp;gt;ls
+<span class="string">'ls'</span> is <span class="operator">not</span> recognized <sp]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Using Streaming Chunked HTML to Get The Web pages render faster]]></title>
+    <link href="http://catalint.github.io/using-streaming-chunked-html-to-get-the-web-pages-render-faster/"/>
+    <id>http://catalint.github.io/using-streaming-chunked-html-to-get-the-web-pages-render-faster/</id>
+    <published>2014-04-25T07:16:41.000Z</published>
+    <updated>2015-11-20T21:41:58.318Z</updated>
+    <content type="html"><![CDATA[<p><span style="color: #666666;">When it comes to your users’ perception of speed, nothing causes more harm than a blank white page and a busy browser icon showing no progress. Sending the first part of the response before it’s finished can have a big impact on the perceived speed of your app.</span></p>
+<a id="more"></a>
+<p>Below are some ideas to get this done, code examples are written in node.js but they can be used in any other programming language.</p>
+<h2 id="BigPipe"><strong>BigPipe</strong></h2><p>A few years ago, Facebook introduced a new technique it started using on its homepage called <a href="https://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919" target="_blank" rel="external">BigPipe</a>. It combines the benefits of <a href="https://developers.google.com/speed/docs/best-practices/request" target="_blank" rel="external">making fewer HTTP calls</a>with being <a href="https://developers.google.com/speed/articles/browser-paint-events" target="_blank" rel="external">quick to the first paint</a>. The benefits can be substantial, but BigPipe uses some unconventional approaches to dividing up CSS and markup that could be quite a departure from the common frameworks and architecture you’re probably using to build your apps. Unless you’ve achieved Facebook’s scale, the tradeoffs might not be worth it.</p>
+<h2 id="Half-measures_with_benefits"><strong>Half-measures with benefits</strong></h2><p>You can still get a lot of mileage out of a few simple tweaks that won’t require many changes to your standard setup. When it comes to your users’ perception of speed, nothing causes more harm than a blank white page and a busy browser icon showing no progress. Sending the first part of the response before it’s finished can have a big impact on the perceived speed of your app.</p>
+<p>The technique is pretty simple: we’ll be using a feature of HTTP 1.1 called<a href="http://en.wikipedia.org/wiki/Chunked_transfer_encoding" target="_blank" rel="external">Chunked transfer encoding</a>. With a standard Express.js response, you normally use <code>res.send</code> or <code>res.render</code>. These handy shortcuts write best-guess headers and send of the response with a single command.<span id="more-15534" style="font-weight: inherit; font-style: inherit;"></span></p>
+<p>The downside is that it doesn’t send anything before that. You might be holding up the whole page while you wait for one little section that’s pulling from the Twitter API.</p>
+<p>Instead, we’ll break things up and write a few more lines of code. Let’s start with the HTML <code>head</code>, our CSS and JS tags, and the opening tag of the <code>body</code> element:</p>
+<div id="crayon-5359fefbc4ad9827338244" class="crayon-syntax crayon-theme-familiar crayon-font-monaco crayon-os-pc print-yes crayon-wrapped" style="color: #666666;" data-settings=" minimize scroll-mouseover wrap"><br><div class="crayon-plain-wrap" style="font-weight: inherit; font-style: inherit;"></div><br><div class="crayon-main" style="font-weight: inherit; font-style: inherit;"><br><table class="crayon-table" style="font-weight: inherit; font-style: inherit;"><br><tbody style="font-weight: inherit; font-style: inherit;"><br><tr class="crayon-row" style="font-weight: inherit; font-style: inherit;"><br><td class="crayon-nums " style="font-weight: inherit; font-style: inherit; color: #afafaf !important;" data-settings="hide"><br><div class="crayon-nums-content" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ad9827338244-1">1</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ad9827338244-2">2</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ad9827338244-3">3</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ad9827338244-4">4</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ad9827338244-5">5</div><br></div></td><br><td class="crayon-code" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-pre" style="font-weight: inherit; font-style: inherit;"><br><div id="crayon-5359fefbc4ad9827338244-1" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">app</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">get</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘/test’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-t" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">function</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4ad9827338244-2" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;html&gt;&lt;head&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4ad9827338244-3" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// res.write(… css and js tags)</span></div><br><div id="crayon-5359fefbc4ad9827338244-4" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;body&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4ad9827338244-5" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">}</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br></div></td><br></tr><br></tbody><br></table><br></div><br></div>
+
+<p>Express automatically sets the HTTP ‘Transfer-Encoding’ header to ‘chunked.’ It then sends the HTML that we’ve created here. Once the browser sees the JS and CSS tags in that <code>head</code> element, it can start downloading those assets while your app is finishing the body of its response.</p>
+<p>After we’ve fetched and rendered the necessary bits for the rest of our page (database calls, external APIs, and so forth), we write those out, and then close the <code>body</code> and HTML tags, and finish the response by using <code>res.end</code>.</p>
+<div id="crayon-5359fefbc4ae9564201401" class="crayon-syntax crayon-theme-familiar crayon-font-monaco crayon-os-pc print-yes crayon-wrapped" style="color: #666666;" data-settings=" minimize scroll-mouseover wrap"><br><div class="crayon-plain-wrap" style="font-weight: inherit; font-style: inherit;"></div><br><div class="crayon-main" style="font-weight: inherit; font-style: inherit;"><br><table class="crayon-table" style="font-weight: inherit; font-style: inherit;"><br><tbody style="font-weight: inherit; font-style: inherit;"><br><tr class="crayon-row" style="font-weight: inherit; font-style: inherit;"><br><td class="crayon-nums " style="font-weight: inherit; font-style: inherit; color: #afafaf !important;" data-settings="hide"><br><div class="crayon-nums-content" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-1">1</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-2">2</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-3">3</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-4">4</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-5">5</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-6">6</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-7">7</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4ae9564201401-8">8</div><br></div></td><br><td class="crayon-code" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-pre" style="font-weight: inherit; font-style: inherit;"><br><div id="crayon-5359fefbc4ae9564201401-1" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">app</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">get</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘/test’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-t" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">function</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4ae9564201401-2" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;html&gt;&lt;head&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4ae9564201401-3" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// res.write(… css and js tags)</span></div><br><div id="crayon-5359fefbc4ae9564201401-4" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;body&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4ae9564201401-5" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// fetch data and write main body of page </span></div><br><div id="crayon-5359fefbc4ae9564201401-6" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// with more res.write(‘…’) calls</span></div><br><div id="crayon-5359fefbc4ae9564201401-7" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-st" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">end</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;/body&gt;&lt;/html&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4ae9564201401-8" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">}</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br></div></td><br></tr><br></tbody><br></table><br></div><br></div>
+
+<h2 id="Streams"><strong>Streams</strong></h2><p>Another option is to use Node Streams and <code>pipe</code> to the response. This requires a readable stream. For example, using the ever popular <a href="https://github.com/mikeal/request" target="_blank" rel="external">Request module</a>, you can<code>pipe</code> the incoming response from an external source straight to a <code>response</code> that your app sends to the browser, like this:</p>
+<div id="crayon-5359fefbc4af4245975857" class="crayon-syntax crayon-theme-familiar crayon-font-monaco crayon-os-pc print-yes crayon-wrapped" style="color: #666666;" data-settings=" minimize scroll-mouseover wrap"><br><div class="crayon-plain-wrap" style="font-weight: inherit; font-style: inherit;"></div><br><div class="crayon-main" style="font-weight: inherit; font-style: inherit;"><br><table class="crayon-table" style="font-weight: inherit; font-style: inherit;"><br><tbody style="font-weight: inherit; font-style: inherit;"><br><tr class="crayon-row" style="font-weight: inherit; font-style: inherit;"><br><td class="crayon-nums " style="font-weight: inherit; font-style: inherit; color: #afafaf !important;" data-settings="hide"><br><div class="crayon-nums-content" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4af4245975857-1">1</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4af4245975857-2">2</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4af4245975857-3">3</div><br></div></td><br><td class="crayon-code" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-pre" style="font-weight: inherit; font-style: inherit;"><br><div id="crayon-5359fefbc4af4245975857-1" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">app</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">get</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘/test’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-t" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">function</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4af4245975857-2" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">pipe</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">request</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘<a href="http://mysite.com/doodle.png" target="_blank" rel="external">http://mysite.com/doodle.png</a>‘</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">pipe</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">resp</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4af4245975857-3" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">}</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br></div></td><br></tr><br></tbody><br></table><br></div><br></div>
+
+<h2 id="Beyond_Express"><strong>Beyond Express</strong></h2><p>I recently wrote an <a href="http://strongloop.com/strongblog/node-js-express-introduction-koa-js-zone/" target="_blank" rel="external">intro to Koa</a>. Unlike the <code>res.*</code> syntax of Express, Koa generally uses <code>this.body = &#39;HTML HERE&#39;</code>. There’s an example in the Koa repo that shows one way to <a href="https://github.com/koajs/examples/tree/master/stream-view" target="_blank" rel="external">stream an HTML page</a>. If you’re not ready to live on the bleeding edge of node v0.11.x, take a look at <a href="https://github.com/then/then-jade" target="_blank" rel="external">then-jade</a>; you’ll get some of the cool syntax of ES6 generators and the benefits of streaming chunks of HTML, all with the cozy v0.10.x environment and the <a href="http://strongloop.com/strongblog/using-node-js-for-static-sites-jade/" target="_blank" rel="external">awesomeness of Jade</a>.</p>
+<h2 id="No_chunks_please"><strong>No chunks please</strong></h2><p>In modern browsers, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">XHR object’s</a> <code>readyState</code> can have a value of<code>&#39;LOADING&#39;</code> (3). That allows them to handle the chunked encoding that we’re sending. However, if you’re still stuck supporting IE8 (or lower) you can use a clever addition of socket.io, nicely packaged up as <a href="https://www.npmjs.org/package/streamable" target="_blank" rel="external">Streamable</a>. If that seems like too much of a hack, you can use Express’ content-negotiation syntax to send the response the “old fashioned” way when the request is via XHR:</p>
+<div id="crayon-5359fefbc4aff527149138" class="crayon-syntax crayon-theme-familiar crayon-font-monaco crayon-os-pc print-yes crayon-wrapped" style="color: #666666;" data-settings=" minimize scroll-mouseover wrap"><br><div class="crayon-plain-wrap" style="font-weight: inherit; font-style: inherit;"></div><br><div class="crayon-main" style="font-weight: inherit; font-style: inherit;"><br><table class="crayon-table" style="font-weight: inherit; font-style: inherit;"><br><tbody style="font-weight: inherit; font-style: inherit;"><br><tr class="crayon-row" style="font-weight: inherit; font-style: inherit;"><br><td class="crayon-nums " style="font-weight: inherit; font-style: inherit; color: #afafaf !important;" data-settings="hide"><br><div class="crayon-nums-content" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-1">1</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-2">2</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-3">3</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-4">4</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-5">5</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-6">6</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-7">7</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-8">8</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-9">9</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-10">10</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-11">11</div><br><div class="crayon-num crayon-striped-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-12">12</div><br><div class="crayon-num" style="font-weight: inherit !important; font-style: inherit;" data-line="crayon-5359fefbc4aff527149138-13">13</div><br></div></td><br><td class="crayon-code" style="font-weight: inherit; font-style: inherit;"><br><div class="crayon-pre" style="font-weight: inherit; font-style: inherit;"><br><div id="crayon-5359fefbc4aff527149138-1" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">app</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">get</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘/test’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-t" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">function</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">,</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4aff527149138-2" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-st" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">if</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">req</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">xhr</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4aff527149138-3" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// fetch data, pass to template</span></div><br><div id="crayon-5359fefbc4aff527149138-4" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// response is sent in one command</span></div><br><div id="crayon-5359fefbc4aff527149138-5" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">render</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-i" style="font-weight: inherit !important; font-style: inherit;">data</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4aff527149138-6" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">  </span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">}</span><span class="crayon-st" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">else</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">{</span></div><br><div id="crayon-5359fefbc4aff527149138-7" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;html&gt;&lt;head&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4aff527149138-8" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// res.write(… css and js tags)</span></div><br><div id="crayon-5359fefbc4aff527149138-9" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-e" style="font-weight: inherit !important; font-style: inherit; color: #004ed0 !important;">write</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;body&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4aff527149138-10" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// fetch data and write main body of page </span></div><br><div id="crayon-5359fefbc4aff527149138-11" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-c" style="font-weight: inherit !important; font-style: inherit; color: #ff8000 !important;">// with more res.write(‘…’) calls</span></div><br><div id="crayon-5359fefbc4aff527149138-12" class="crayon-line crayon-striped-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-h" style="font-weight: inherit !important; font-style: inherit; color: #006fe0 !important;">    </span><span class="crayon-v" style="font-weight: inherit !important; font-style: inherit; color: #002d7a !important;">res</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">.</span><span class="crayon-st" style="font-weight: inherit !important; font-style: inherit; color: #800080 !important;">end</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">(</span><span class="crayon-s" style="font-weight: inherit !important; font-style: inherit; color: #008000 !important;">‘&lt;/body&gt;&lt;/html&gt;’</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br><div id="crayon-5359fefbc4aff527149138-13" class="crayon-line" style="font-weight: inherit !important; font-style: inherit;"><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">}</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">)</span><span class="crayon-sy" style="font-weight: inherit !important; font-style: inherit; color: #333333 !important;">;</span></div><br></div></td><br></tr><br></tbody><br></table><br></div><br></div>
+
+<p>To go the extra mile, you might try some client-side detection for support of<code>readyState === 3</code>, and pass an extra parameter in your XHR call to let the server know it can send a chunked response. But some browsers that support chunked encoding in XHR still won’t let you access the data that’s received until the request is finished, which eliminates the primary benefit.</p>
+<h2 id="Yak_Shaving"><strong>Yak Shaving</strong></h2><p>There’s an obvious tradeoff here; we’re essentially stripping out the shortcuts and common lingo that Express gives us and reverting back to core Node response syntax and/or using obscure libraries. If your page is really simple and quick to render, the extra syntax might not be worth it.</p>
+<p>Source: <a href="http://strongloop.com/strongblog/streaming-chunked-html-node-js-data/" target="_blank" rel="external">http://strongloop.com/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><span style="color: #666666;">When it comes to your users’ perception of speed, nothing causes more harm than a blank white page and a busy browser icon showing no progress. Sending the first part of the response before it’s finished can have a big impact on the perceived speed of your app.</span></p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Nginx automatic domain configuration script for Cpanel]]></title>
+    <link href="http://catalint.github.io/nginx-automatic-domain-configuration-script-for-cpanel/"/>
+    <id>http://catalint.github.io/nginx-automatic-domain-configuration-script-for-cpanel/</id>
+    <published>2014-04-25T04:26:25.000Z</published>
+    <updated>2015-11-20T21:41:58.319Z</updated>
+    <content type="html"><![CDATA[<p>Putting nginx in front of the Apache server that comes with Cpanel can be tricky.</p>
+<p>Bellow is a script that reads the cpanel config files of the accounts and builds nginx server’s (similar to Apache vhost) from them.</p>
+<p>It can also be added to do this automatically when new accounts and domains are registered on the server.</p>
+<a id="more"></a>
+<p>The script’s coding style is not to be taken as an example, this was written many years ago :)</p>
+<script src="https://gist.github.com/catalint/11281122.js"></script>Sample output:<script src="https://gist.github.com/catalint/11281171.js"></script>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Putting nginx in front of the Apache server that comes with Cpanel can be tricky.</p>
+<p>Bellow is a script that reads the cpanel config files of the accounts and builds nginx server’s (similar to Apache vhost) from them.</p>
+<p>It can also be added to do this automatically when new accounts and domains are registered on the server.</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Here's A 1300 Year Old Solution To Resilience - Rebuild, Rebuild, Rebuild]]></title>
+    <link href="http://catalint.github.io/heres-a-1300-year-old-solution-to-resilience-rebuild-rebuild-rebuild/"/>
+    <id>http://catalint.github.io/heres-a-1300-year-old-solution-to-resilience-rebuild-rebuild-rebuild/</id>
+    <published>2014-04-24T06:40:04.000Z</published>
+    <updated>2015-11-20T21:41:58.316Z</updated>
+    <content type="html"><![CDATA[<p>The <a href="http://en.wikipedia.org/wiki/Ise_Grand_Shrine" target="_blank" rel="external">Ise Grand Shrine</a> has been in continuous existence for over 1300 years because every twenty years an exact replica has been rebuilt on an adjacent footprint. The former temple is then dismantled.</p>
+<p>Now that’s resilience.<a id="more"></a>If you want something to last make it a living part of a culture. It’s not so much the building that is remade, what is rebuilt and passed down from generation to generation is the meme that the shrine is important and worth preserving. The rest is an unfolding of that imperative.</p>
+<p>You can see echoes of this same process in Open Source projects like Linux and the libraries and frameworks that get themselves reconstructed in each new environment.</p>
+<p>The patterns of recurrence in software are the result of Darwinian selection process that keeps simplicity and value alive in human minds.</p>
+<p>&nbsp;</p>
+<p>More on this story on  <a href="http://highscalability.com/blog/2014/4/23/heres-a-1300-year-old-solution-to-resilience-rebuild-rebuild.html" target="_blank" rel="external">High Scalability</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>The <a href="http://en.wikipedia.org/wiki/Ise_Grand_Shrine">Ise Grand Shrine</a> has been in continuous existence for over 1300 years because every twenty years an exact replica has been rebuilt on an adjacent footprint. The former temple is then dismantled.</p>
+<p>Now that’s resilience.]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[stop software patents !]]></title>
+    <link href="http://catalint.github.io/stop-software-patents/"/>
+    <id>http://catalint.github.io/stop-software-patents/</id>
+    <published>2014-04-01T08:13:24.000Z</published>
+    <updated>2015-11-20T21:41:58.315Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://stopsoftwarepatents.eu/" target="_blank" rel="external">http://stopsoftwarepatents.eu/</a><br><a href="http://endsoftpatents.org/" target="_blank" rel="external">http://endsoftpatents.org/ </a><br><a href="http://www.nosoftwarepatents.com/" target="_blank" rel="external">http://www.nosoftwarepatents.com/ </a><br><a href="https://www.eff.org/patent-busting" target="_blank" rel="external">https://www.eff.org/patent-busting</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://stopsoftwarepatents.eu/" target="_blank" rel="external">http://stopsoftwarepatents.eu/</a><br><a href="http://endsoftpate]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[How one man lost his $50,000 Twitter username]]></title>
+    <link href="http://catalint.github.io/how-one-man-lost-his-50000-twitter-username/"/>
+    <id>http://catalint.github.io/how-one-man-lost-his-50000-twitter-username/</id>
+    <published>2014-01-31T12:27:21.000Z</published>
+    <updated>2015-11-20T21:41:58.315Z</updated>
+    <content type="html"><![CDATA[<p>Read more about this on :</p>
+<p><a href="http://thenextweb.com/socialmedia/2014/01/29/lost-50000-twitter-username/" target="_blank" rel="external">http://thenextweb.com/socialmedia/2014/01/29/lost-50000-twitter-username/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Read more about this on :</p>
+<p><a href="http://thenextweb.com/socialmedia/2014/01/29/lost-50000-twitter-username/" target="_blank" rel=]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[UX for birth date chooser]]></title>
+    <link href="http://catalint.github.io/ux-for-birth-date-chooser/"/>
+    <id>http://catalint.github.io/ux-for-birth-date-chooser/</id>
+    <published>2013-11-14T13:01:52.000Z</published>
+    <updated>2015-11-20T21:41:58.313Z</updated>
+    <content type="html"><![CDATA[<p>how cool is this? :) taken from new myspace site</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>how cool is this? :) taken from new myspace site</p>
+]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[The Next Big Thing: Responsive Icons]]></title>
+    <link href="http://catalint.github.io/the-next-big-thing-responsive-icons/"/>
+    <id>http://catalint.github.io/the-next-big-thing-responsive-icons/</id>
+    <published>2013-11-13T11:37:27.000Z</published>
+    <updated>2015-11-20T21:41:58.313Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://designmodo.com/responsive-icons/" target="_blank" rel="external">http://designmodo.com/responsive-icons/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://designmodo.com/responsive-icons/" target="_blank" rel="external">http://designmodo.com/responsive-icons/</a></p>
+]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[How to tell HTML from HTML5]]></title>
+    <link href="http://catalint.github.io/how-to-tell-html-from-html5/"/>
+    <id>http://catalint.github.io/how-to-tell-html-from-html5/</id>
+    <published>2013-11-08T15:46:33.000Z</published>
+    <updated>2015-11-20T21:41:58.312Z</updated>
+    <content type="html"><![CDATA[<p>&nbsp;</p>
+<p><pre>&lt;!–[if lt IE 9]&gt;<br>&lt;script src=”dist/html5shiv.js”&gt;&lt;/script&gt;<br>&lt;![endif]–&gt;<br><a id="more"></a></pre><br><a href="https://code.google.com/p/html5shiv/" target="_blank" rel="external">https://code.google.com/p/html5shiv/</a></p>
+<p>&nbsp;</p>
+<p>10x @Alex S for the pic</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>&nbsp;</p>
+<p><pre>&lt;!–[if lt IE 9]&gt;<br>&lt;script src=”dist/html5shiv.js”&gt;&lt;/script&gt;<br>&lt;![endif]–&gt;<br>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Motorola’s Project Ara]]></title>
+    <link href="http://catalint.github.io/motorola-project-ara/"/>
+    <id>http://catalint.github.io/motorola-project-ara/</id>
+    <published>2013-10-29T08:05:33.000Z</published>
+    <updated>2015-11-20T21:41:58.312Z</updated>
+    <content type="html"><![CDATA[<p>A phone designed for 6 billion people should be inspired by at least a few thousand.<br><a id="more"></a></p>
+<p>Meet Ara.</p>
+<p>Led by Motorola’s Advanced Technology and Projects group, Project Ara is developing a free, open hardware platform for creating highly modular smartphones. Motorola wants to do for hardware what the Android platform has done for software: create a vibrant third-party developer ecosystem, lower the barriers to entry, increase the pace of innovation, and substantially compress development timelines.</p>
+<p>Motorola’s goal is to drive a more thoughtful, expressive, and open relationship between users, developers, and their phones. To give you the power to decide what your phone does, how it looks, where and what it’s made of, how much it costs, and how long you’ll keep it.</p>
+<p>More details at : <a href="http://dscout.com/ara?referral_token=bf8ce7" title="http://dscout.com/ara" target="_blank" rel="external">http://dscout.com/ara</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>A phone designed for 6 billion people should be inspired by at least a few thousand.<br>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Logentries – Log Management & Log Analytics in the Cloud]]></title>
+    <link href="http://catalint.github.io/logentries-log-management-log-analytics-in-the-cloud/"/>
+    <id>http://catalint.github.io/logentries-log-management-log-analytics-in-the-cloud/</id>
+    <published>2013-10-26T19:44:27.000Z</published>
+    <updated>2015-11-20T21:41:58.311Z</updated>
+    <content type="html"><![CDATA[<h4 id="Developers">Developers</h4><p>Find problems fast. Quickly debug your apps for optimal performance and uptime</p>
+<a id="more"></a>
+<h4 id="IT_Operations">IT Operations</h4><p>Automatically monitor and identify critical IT issues before they impact the business</p>
+<p>&nbsp;</p>
+<h4 id="Business_Analysts">Business Analysts</h4><p>Instantly gain the intelligence you need to improve your business</p>
+<p><a href="https://logentries.com/" target="_blank" rel="external">https://logentries.com/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="Developers">Developers</h4><p>Find problems fast. Quickly debug your apps for optimal performance and uptime</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Pusher - API for scalable realtime functionality]]></title>
+    <link href="http://catalint.github.io/pusher-api-for-scalable-realtime-functionality/"/>
+    <id>http://catalint.github.io/pusher-api-for-scalable-realtime-functionality/</id>
+    <published>2013-10-25T19:38:35.000Z</published>
+    <updated>2015-11-20T21:41:58.311Z</updated>
+    <content type="html"><![CDATA[<p>Pusher is a hosted <strong>API</strong> for <strong>quickly</strong>, <strong>easily</strong>and <strong>securely</strong> adding <strong>scalable</strong> realtime functionality to web and mobile apps.</p>
+<p>It provides a simple set of APIs and libraries that allow you to build rich realtime features in hours rather than days.</p>
+<a id="more"></a>
+<p><a href="http://pusher.com/" target="_blank" rel="external">http://pusher.com/</a>  &amp;  <a href="http://pusher.com/docs/javascript_quick_start" target="_blank" rel="external">http://pusher.com/docs/javascript_quick_start</a></p>
+<p><img src="http://catalint.ro/media/img_526ac7a48031c.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Pusher is a hosted <strong>API</strong> for <strong>quickly</strong>, <strong>easily</strong>and <strong>securely</strong> adding <strong>scalable</strong> realtime functionality to web and mobile apps.</p>
+<p>It provides a simple set of APIs and libraries that allow you to build rich realtime features in hours rather than days.</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Bundles for Developers & Designers]]></title>
+    <link href="http://catalint.github.io/bundles-for-developers-designers/"/>
+    <id>http://catalint.github.io/bundles-for-developers-designers/</id>
+    <published>2013-10-23T05:33:14.000Z</published>
+    <updated>2015-11-20T21:41:58.309Z</updated>
+    <content type="html"><![CDATA[<p>StackSocial is the place to discover, share, and buy trending tech.</p>
+<p>Incredible discounts.</p>
+<p><a href="https://stacksocial.com" title="https://stacksocial.com" target="_blank" rel="external">https://stacksocial.com</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>StackSocial is the place to discover, share, and buy trending tech.</p>
+<p>Incredible discounts.</p>
+<p><a href="https://stacksocial.com"]]>
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Daylight savings coming soon to a home near you]]></title>
+    <link href="http://catalint.github.io/daylight-savings-coming-soon-to-a-home-near-you/"/>
+    <id>http://catalint.github.io/daylight-savings-coming-soon-to-a-home-near-you/</id>
+    <published>2013-10-21T16:53:38.000Z</published>
+    <updated>2015-11-20T21:41:58.309Z</updated>
+    <content type="html"><![CDATA[<p>In case your country is still using DST , you may have some extra bugs to fix this week in your scripts.</p>
+<p>&nbsp;</p>
+<a id="more"></a>
+<p>So, what to do if you have  lines of code that look like this: <code>$tomorrow = date(&quot;Y-m-d&quot;, time() + 60*60*24);</code></p>
+<p>1. The fast fix , start using strtotime(“+1 day”); or any of the other params that you cand read about here: <a href="http://php.net/manual/de/function.strtotime.php" target="_blank" rel="external">http://php.net/manual/de/function.strtotime.php</a></p>
+<p>2. The right fix, learn about DateTime ( <a href="http://php.net/manual/en/class.datetime.php" target="_blank" rel="external">http://php.net/manual/en/class.datetime.php</a> ) and all the cool stuff it can do, like:</p>
+<ul>
+<li><a href="http://www.php.net/manual/en/datetime.add.php" target="_blank" rel="external">DateTime::add</a> — Adds an amount of days, months, years, hours, minutes and seconds to a DateTime object</li>
+<li><a href="http://www.php.net/manual/en/datetime.createfromformat.php" target="_blank" rel="external">DateTime::createFromFormat</a> — Returns new DateTime object formatted according to the specified format</li>
+<li><a href="http://www.php.net/manual/en/datetime.sub.php" target="_blank" rel="external">DateTime::sub</a> — Subtracts an amount of days, months, years, hours, minutes and seconds from a DateTime object</li>
+<li><a href="http://www.php.net/manual/en/datetime.diff.php" target="_blank" rel="external">DateTime::diff</a> — Returns the difference between two DateTime objects<br>quick example for the power of DateTime</li>
+</ul>
+<p>&lt;?php<br>$datetime1 = new DateTime(‘2013-10-21’);<br>$datetime2 = new DateTime(‘2013-11-04’);<br>$interval = $datetime1-&gt;diff($datetime2);<br>echo $interval-&gt;format(‘%R%a days’);<br>?&gt;</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>In case your country is still using DST , you may have some extra bugs to fix this week in your scripts.</p>
+<p>&nbsp;</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Wordpress alternative, Ghost]]></title>
+    <link href="http://catalint.github.io/wordpress-alternative-ghost/"/>
+    <id>http://catalint.github.io/wordpress-alternative-ghost/</id>
+    <published>2013-10-18T06:00:21.000Z</published>
+    <updated>2015-11-20T21:41:58.307Z</updated>
+    <content type="html"><![CDATA[<p>A new wordpress alternative has arrived, Ghost,  a beautifully designed platform dedicated to one thing: Publishing.</p>
+<a id="more"></a>
+<p>Ghost is an Open Source application which allows you to write and publish your own blog, giving you the tools to make it easy and even fun to do. It’s simple, elegant, and designed so that you can spend less time making your blog work and more time blogging.</p>
+<p>Also, it’s written in node.js</p>
+<p><a href="https://en.ghost.org/" target="_blank" rel="external">https://en.ghost.org/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>A new wordpress alternative has arrived, Ghost,  a beautifully designed platform dedicated to one thing: Publishing.</p>]]>
+    
+    </summary>
+    
+      <category term="Root" scheme="http://catalint.github.io/categories/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[unset [ro]]]></title>
+    <link href="http://catalint.github.io/unset-ro/"/>
+    <id>http://catalint.github.io/unset-ro/</id>
+    <published>2013-10-16T17:45:10.000Z</published>
+    <updated>2015-11-20T21:41:58.308Z</updated>
+    <content type="html"><![CDATA[<p>Q: daca dau unset la un element dintr-un array n-o sa mai fie acolo, nu?</p>
+<p>A: daca dai unset se duce intr-o lume magica iar la apocalipsa o sa intre in lumea noastra si o sa-ti faca caca roz in sosete atunci cand dormi</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Q: daca dau unset la un element dintr-un array n-o sa mai fie acolo, nu?</p>
+<p>A: daca dai unset se duce intr-o lume magica iar la apoca]]>
+    </summary>
+    
+      <category term="Troll" scheme="http://catalint.github.io/categories/Troll/"/>
+    
+  </entry>
+  
+</feed>

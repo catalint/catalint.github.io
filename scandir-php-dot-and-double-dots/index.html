@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Catalin T.</title>
+  <title>scandir() php dot and double dots | Catalin T.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Catalin T.">
-<meta property="og:url" content="http://catalint.github.io/archives/2015/index.html">
+  <meta name="description" content="files/folder “.” and “..” contrary “to popularly belief” are not always first
+
+ex. on Linux,when you have a file name that starts with  “-“ it goes on the first position , before “.” and “..”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="scandir() php dot and double dots">
+<meta property="og:url" content="http://catalint.github.io/scandir-php-dot-and-double-dots/index.html">
 <meta property="og:site_name" content="Catalin T.">
-<meta property="og:description">
+<meta property="og:description" content="files/folder “.” and “..” contrary “to popularly belief” are not always first
+
+ex. on Linux,when you have a file name that starts with  “-“ it goes on the first position , before “.” and “..”">
+<meta property="og:updated_time" content="2015-11-20T21:41:58.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Catalin T.">
-<meta name="twitter:description">
+<meta name="twitter:title" content="scandir() php dot and double dots">
+<meta name="twitter:description" content="files/folder “.” and “..” contrary “to popularly belief” are not always first
+
+ex. on Linux,when you have a file name that starts with  “-“ it goes on the first position , before “.” and “..”">
   
     <link rel="alternative" href="/atom.xml" title="Catalin T." type="application/atom+xml">
   
@@ -59,77 +66,84 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hello-world/" class="archive-article-date">
-  <time datetime="2015-11-20T21:23:13.397Z" itemprop="datePublished">Nov 20</time>
+        <section id="main"><article id="post-scandir-php-dot-and-double-dots" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/scandir-php-dot-and-double-dots/" class="article-date">
+  <time datetime="2013-08-14T18:33:59.000Z" itemprop="datePublished">2013-08-14</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Root/">Root</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      scandir() php dot and double dots
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/a-new-kind-of-db-distributed-stream-processing-framework/" class="archive-article-date">
-  <time datetime="2015-03-05T14:48:27.000Z" itemprop="datePublished">Mar 5</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/a-new-kind-of-db-distributed-stream-processing-framework/">a new kind of DB, distributed stream processing framework</a>
-    </h1>
-  
+        <p><div>files/folder “.” and “..” contrary “to popularly belief” are not always first</div></p>
+<p><div></div></p>
+<p><div>ex. on Linux,when you have a file name that starts with  “-“ it goes on the first position , before “.” and “..”</div></p>
+<p><div><a id="more"></a></div></p>
+<div>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/scoped-css/" class="archive-article-date">
-  <time datetime="2015-02-27T21:57:43.000Z" itemprop="datePublished">Feb 27</time>
-</a>
+<p>so</p>
+<pre><code> <span class="variable">$files</span> = scandir(<span class="variable">$dir</span>);
+`&lt;/pre&gt;
+&lt;pre&gt;`array_shift(<span class="variable">$files</span>);
+array_shift(<span class="variable">$files</span>);
+`&lt;/pre&gt;
+is prone <span class="keyword">to</span> bug , because it will eliminate the <span class="string">"-"</span> file , and the <span class="string">"."</span> and go on with the execution
+
+a better version <span class="keyword">to</span> bypass dot and double dot files <span class="keyword">when</span> using scandir <span class="keyword">in</span> php is :
+&lt;pre&gt;`foreach (<span class="variable">$files</span> <span class="keyword">as</span> <span class="variable">$file</span>) {
+            if(<span class="variable">$file</span>==<span class="string">'.'</span> || <span class="variable">$file</span>==<span class="string">'..'</span>)continue;
+</code></pre><p></p></div><p></p>
+<p><div></div><br><a href="https://gist.github.com/catalint/6230882" target="_blank" rel="external">https://gist.github.com/<wbr>catalint/6230882</a></p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/scoped-css/">scoped CSS</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://catalint.github.io/scandir-php-dot-and-double-dots/" data-id="cih86zokp000vwsosivxc9ahx" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/which-responsive-images-solution-should-you-use/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Which responsive images solution should you use?
+        
+      </div>
+    </a>
+  
+  
+    <a href="/facebook-access-new-newsfeed/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">facebook access new newsfeed</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

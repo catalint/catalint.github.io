@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Catalin T.</title>
+  <title>Windows + Git + SSH - A tutorial | Catalin T.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="Have you ever wanted to use Git over SSH on Windows? Of course you have. After searching the internets, reading over 10 similar tutorials and banging my head on the keyboard for about four hours i man">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://catalint.github.io/hello-world/index.html">
+<meta property="og:title" content="Windows + Git + SSH - A tutorial">
+<meta property="og:url" content="http://catalint.github.io/windows-git-ssh-a-tutorial/index.html">
 <meta property="og:site_name" content="Catalin T.">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-20T21:23:13.397Z">
+<meta property="og:description" content="Have you ever wanted to use Git over SSH on Windows? Of course you have. After searching the internets, reading over 10 similar tutorials and banging my head on the keyboard for about four hours i man">
+<meta property="og:updated_time" content="2015-11-20T21:41:58.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Windows + Git + SSH - A tutorial">
+<meta name="twitter:description" content="Have you ever wanted to use Git over SSH on Windows? Of course you have. After searching the internets, reading over 10 similar tutorials and banging my head on the keyboard for about four hours i man">
   
     <link rel="alternative" href="/atom.xml" title="Catalin T." type="application/atom+xml">
   
@@ -63,12 +60,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-windows-git-ssh-a-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hello-world/" class="article-date">
-  <time datetime="2015-11-20T21:23:13.397Z" itemprop="datePublished">2015-11-20</time>
+    <a href="/windows-git-ssh-a-tutorial/" class="article-date">
+  <time datetime="2013-10-03T14:37:49.000Z" itemprop="datePublished">2013-10-03</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Root/">Root</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -77,7 +78,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Windows + Git + SSH - A tutorial
     </h1>
   
 
@@ -85,20 +86,49 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>Have you ever wanted to use Git over SSH on Windows? Of course you have. After searching the internets, reading over 10 similar tutorials and banging my head on the keyboard for about four hours i managed to get it working.</p>
+<a id="more"></a>
+<p>Difficulty rating: Easy/Medium.</p>
+<p>This tutorial assumes you are on a clean machine and you don’t have Git installed or you have another version of Git. Feel free to skip ahead if you have the current version.</p>
+<ol>
+<li>Download the latest Git release from <a href="http://git-scm.com/download/win" title="Git for Windows" target="_blank" rel="external">here</a> and install it.</li>
+<li><p>Open Git Bash and perform the initial Git setup by running the following commands:</p>
+<ol>
+<li><code>git config --global user.name &quot;&amp;lt;Your Name&amp;gt;&quot;</code></li>
+<li><code>git config --global user.email &quot;&amp;lt;Your E-mail&amp;gt;&quot;</code></li>
+</ol>
+</li>
+<li><p>Go to the .ssh directory which is located in your home directory. In Windows Vista and up (which you should be using in 2013, btw) this directory is in C:\Users\&lt;Your Name&gt;.ssh. From the Git Bash you can get get there using “cd ~/.ssh”. If it does not exist create it now.</p>
+</li>
+<li>List the files in this directory using “ls”. If you see two files named id_rsa and id_rsa.pub you can skip the next step.</li>
+<li><p>You have to create a private/public RSA key pair. To do this, run the command “<code>ssh-keygen -t rsa</code>“.</p>
+<ol>
+<li>It will ask for the directory and file name for your new RSA key. Hit Enter to use the defaults.</li>
+<li>Then it will ask for a passphrase. It’s not recommended to leave this blank unless you need this key for an automated script. Enter your passphrase (or leave it blank at your own peril) and hit Enter.</li>
+<li>Confirm your passphrase.</li>
+<li>List the contents of the directory again, marvel at the sight of your new RSA keys and give yourself a pat on the back.</li>
+</ol>
+</li>
+<li><p>Now you have to tell Windows where to find Git and your RSA keys:</p>
+<ol>
+<li>Go to Control Panel -&gt; System -&gt; Advanced System Settings -&gt; Environment Variables.</li>
+<li>In the user variables section (the one at the top) you have to add a new variable named HOME with the value %USERPROFILE%. DO NOT add this to the global variables section or you too will be banging your head on the keyboard for four hours asking yourself why Windows or your IDE can’t communicate with the Git server.</li>
+<li>In the system variables section you have to edit the Path variable and add the path to the Git bin directory which contains the Git executable and other useful tools. Typically (on a 64-bit system) this is “<code>C:\Program Files (x86)\Git\bin</code>“.</li>
+<li>Click on all the OK buttons to save your settings.</li>
+<li>Now you can use git, ssh, cat and all the awesome tools that come with Git in any command prompt or powershell without having to start Git Bash every time AND Window knows where to find your RSA keys.</li>
+</ol>
+</li>
+<li><p>Go to your Git server administration panel/console/whatever and add the contents of the <code>id_rsa.pub</code> file to the SSH Keys section, authorized_keys file or wherever you can add RSA keys for automatic SSH authentication. Do not copy any spaces when you copy the RSA key or it won’t be recognized.</p>
+</li>
+<li>Feel free to git pull or git push over SSH as your heart desires and don’t forget to give yourself another pat on the back for a job well done.</li>
+</ol>
+<hr>
+<p>thanks to Cristan Toma for this post</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://catalint.github.io/hello-world/" data-id="cih86zomk0025wsosvbuos1ve" class="article-share-link">Share</a>
+      <a data-url="http://catalint.github.io/windows-git-ssh-a-tutorial/" data-id="cih86zojr0006wsos6lohiexi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,10 +137,19 @@ Quick">
     
 <nav id="article-nav">
   
+    <a href="/trace-to-where-a-function-was-called-from/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Trace to where a function was called from
+        
+      </div>
+    </a>
   
-    <a href="/a-new-kind-of-db-distributed-stream-processing-framework/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/git-commit-on-wrong-branch/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">a new kind of DB, distributed stream processing framework</div>
+      <div class="article-nav-title">Git commit on wrong branch</div>
     </a>
   
 </nav>
