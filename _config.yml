@@ -7,7 +7,7 @@ title: Catalin T.
 subtitle:
 description:
 author: Catalin Tanasescu
-language: en_US
+language: en
 timezone:
 
 # URL
@@ -68,6 +68,5 @@ theme: landscape
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:git
-  repo:git@github.com:catalint/catalint.github.io.git
-  branch:master
+  type: git
+  repo: git@github.com:catalint/catalint.github.io.git
